@@ -83,6 +83,20 @@ body {
   text-align: start;
 }
 
+/* Explicit physical fallback keeps role dashboards on the right even when
+   the browser/Tailwind build does not emit logical inset utilities. */
+[dir="rtl"] [data-app-shell] > [data-app-sidebar] {
+  right: 0;
+  left: auto;
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+[dir="rtl"] [data-app-shell] > [data-app-content] {
+  margin-right: 16rem;
+  margin-left: 0;
+}
+
 [dir="rtl"] nav a.flex.items-center.gap-2,
 [dir="rtl"] nav button[aria-haspopup="menu"] {
   flex-direction: row-reverse;
@@ -119,5 +133,9 @@ body {
   [data-app-content] {
     margin-inline: 0;
     width: 100%;
+  }
+
+  [dir="rtl"] [data-app-shell] > [data-app-content] {
+    margin-right: 0;
   }
 }

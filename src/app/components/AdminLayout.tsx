@@ -52,7 +52,7 @@ export function AdminLayout() {
   return (
     <div className="min-h-screen flex bg-background" dir="rtl" data-app-shell>
       {/* Fixed Sidebar - Right Side for RTL */}
-      <aside className="w-64 bg-[#2C2C2C] text-white flex flex-col fixed end-0 top-0 h-screen shadow-xl z-40 overflow-y-auto" data-app-sidebar>
+      <aside className="w-64 bg-[#2C2C2C] text-white flex flex-col fixed right-0 left-auto top-0 h-screen shadow-xl z-40 overflow-y-auto" data-app-sidebar>
         {/* Logo Section */}
         <div className="p-6 border-b border-white/10 flex-shrink-0">
           <div className="flex items-center gap-3 mb-2">

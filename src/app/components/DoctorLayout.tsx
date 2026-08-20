@@ -20,7 +20,7 @@ export function DoctorLayout() {
 
   return (
     <div className="min-h-screen flex bg-background" dir="rtl" data-app-shell>
-      <aside className="w-64 bg-[#1E3A2F] text-white flex flex-col fixed end-0 top-0 h-screen shadow-xl z-40" data-app-sidebar>
+      <aside className="w-64 bg-[#1E3A2F] text-white flex flex-col fixed right-0 left-auto top-0 h-screen shadow-xl z-40" data-app-sidebar>
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">

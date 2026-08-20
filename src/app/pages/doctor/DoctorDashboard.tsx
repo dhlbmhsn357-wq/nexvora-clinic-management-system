@@ -198,18 +198,18 @@ export function DoctorDashboard() {
                 {patients.map((patient) => {
                   const cfg = statusConfig[patient.status];
                   return (
-                    <div key={patient.id} className="flex items-center justify-between px-6 py-4 hover:bg-muted/20 transition-colors">
-                      <div className="flex items-center gap-4">
-                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold text-foreground">
-                          {patient.queueNumber}
+                    <div key={patient.id} className="flex flex-wrap items-center justify-between gap-3 px-6 py-4 hover:bg-muted/20 transition-colors">
+                      <div className="flex flex-wrap items-center gap-4">
+                        <div className="text-right">
+                          <p className="font-medium text-foreground">{patient.name}</p>
+                          <p className="text-xs text-muted-foreground">{patient.complaint}</p>
                         </div>
                         <div className="text-right">
                           <p className="text-sm font-medium text-foreground">{patient.time}</p>
                           <p className="text-xs text-muted-foreground">{patient.visitType}</p>
                         </div>
-                        <div className="text-right">
-                          <p className="font-medium text-foreground">{patient.name}</p>
-                          <p className="text-xs text-muted-foreground">{patient.complaint}</p>
+                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold text-foreground">
+                          {patient.queueNumber}
                         </div>
                       </div>
                       <div className="flex items-center gap-3">

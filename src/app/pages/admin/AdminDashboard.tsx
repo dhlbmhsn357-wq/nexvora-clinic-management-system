@@ -129,7 +129,7 @@ export function AdminDashboard() {
             <p className="text-sm text-muted-foreground text-right">جدول مواعيد اليوم وحالتها</p>
           </CardHeader>
           <CardContent>
-            <div className="rounded-xl border border-border overflow-hidden">
+            <div className="rounded-xl border border-border overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50 hover:bg-muted/50">

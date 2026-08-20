@@ -137,17 +137,17 @@ export function ReceptionDashboard() {
               {appointments.map((a) => {
                 const cfg = statusCfg[a.status];
                 return (
-                  <div key={a.id} className="flex items-center justify-between px-6 py-4 hover:bg-muted/20 transition-colors">
-                    <div className="flex items-center gap-5">
-                      <p className="text-sm font-bold text-foreground min-w-[60px] text-right">{a.time}</p>
-                      <div className="text-right">
-                        <p className="text-sm font-medium">{a.doctor}</p>
-                        <p className="text-xs text-muted-foreground">{a.visitType}</p>
-                      </div>
+                  <div key={a.id} className="flex flex-wrap items-center justify-between gap-3 px-6 py-4 hover:bg-muted/20 transition-colors">
+                    <div className="flex flex-wrap items-center gap-5">
                       <div className="text-right">
                         <p className="font-semibold text-foreground">{a.patient}</p>
                         <p className="text-xs text-muted-foreground">{a.phone}</p>
                       </div>
+                      <div className="text-right">
+                        <p className="text-sm font-medium">{a.doctor}</p>
+                        <p className="text-xs text-muted-foreground">{a.visitType}</p>
+                      </div>
+                      <p className="text-sm font-bold text-foreground min-w-[60px] text-right">{a.time}</p>
                     </div>
                     <div className="flex items-center gap-2 flex-wrap">
                       <Badge variant="outline" className={cfg.cls}>{cfg.label}</Badge>

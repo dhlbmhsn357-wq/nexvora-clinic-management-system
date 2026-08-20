@@ -288,12 +288,12 @@ export function QueueManagement() {
             <p className="text-sm text-muted-foreground text-right">القائمة الكاملة لحالة الانتظار اليوم</p>
           </CardHeader>
           <CardContent>
-            <div className="rounded-xl border border-border overflow-hidden">
+            <div className="rounded-xl border border-border overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50 hover:bg-muted/50">
-                    <TableHead className="font-semibold">رقم الدور</TableHead>
                     <TableHead className="font-semibold">اسم المريض</TableHead>
+                    <TableHead className="font-semibold">رقم الدور</TableHead>
                     <TableHead className="font-semibold">وقت الموعد</TableHead>
                     <TableHead className="font-semibold">الطبيب</TableHead>
                     <TableHead className="font-semibold">حالة الدور</TableHead>
@@ -305,6 +305,7 @@ export function QueueManagement() {
                       key={queue.id}
                       className={`hover:bg-muted/30 transition-colors ${queue.status === "serving" ? "bg-primary/5" : ""}`}
                     >
+                      <TableCell className="font-medium">{queue.patientName}</TableCell>
                       <TableCell>
                         <span className={`inline-flex items-center justify-center px-3 py-1 rounded-lg font-mono text-sm font-medium ${
                           queue.status === "serving" ? "bg-primary text-primary-foreground" : "bg-muted"
@@ -312,7 +313,6 @@ export function QueueManagement() {
                           {queue.queueNumber}
                         </span>
                       </TableCell>
-                      <TableCell className="font-medium">{queue.patientName}</TableCell>
                       <TableCell>{queue.appointmentTime}</TableCell>
                       <TableCell>{queue.doctor}</TableCell>
                       <TableCell>{getStatusBadge(queue.status)}</TableCell>

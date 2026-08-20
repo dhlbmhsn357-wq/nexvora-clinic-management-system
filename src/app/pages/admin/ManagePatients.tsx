@@ -176,7 +176,7 @@ export function ManagePatients() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-border overflow-hidden">
+            <div className="rounded-xl border border-border overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow className="bg-muted/50 hover:bg-muted/50">
@@ -309,7 +309,7 @@ export function ManagePatients() {
             <div className="space-y-2">
               <Label className="text-right block">البريد الإلكتروني</Label>
               <Input value={editForm.email || ""} onChange={(e) => setEditForm({ ...editForm, email: e.target.value })}
-                className="text-right" placeholder="البريد الإلكتروني" type="email" />
+                className="text-left" dir="ltr" placeholder="البريد الإلكتروني" type="email" />
             </div>
             <div className="space-y-2">
               <Label className="text-right block">رقم الهاتف</Label>

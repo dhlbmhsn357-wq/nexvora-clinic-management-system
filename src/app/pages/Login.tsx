@@ -125,10 +125,11 @@ export function Login() {
                   <Input
                     id="email"
                     type="email"
+                    dir="ltr"
                     placeholder="بريدك@مثال.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pr-10 h-12 bg-input-background border-border rounded-xl text-right"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl text-left"
                     required
                   />
                 </div>

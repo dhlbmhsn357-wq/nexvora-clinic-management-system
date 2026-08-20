@@ -137,12 +137,13 @@ export function Register() {
                   <Input
                     id="email"
                     type="email"
+                    dir="ltr"
                     placeholder="بريدك@مثال.com"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-right"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-left"
                     required
                   />
                 </div>
@@ -157,12 +158,13 @@ export function Register() {
                   <Input
                     id="phone"
                     type="tel"
+                    dir="ltr"
                     placeholder="+966 5XX XXX XXXX"
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-right"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-left"
                     required
                   />
                 </div>

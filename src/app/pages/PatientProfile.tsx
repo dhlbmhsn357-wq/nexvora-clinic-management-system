@@ -92,12 +92,12 @@ export function PatientProfile() {
                     </div>
                     <div className="space-y-1.5">
                       <Label className="text-right block text-sm">البريد الإلكتروني</Label>
-                      <Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="bg-input-background border-border rounded-xl text-right" />
+                      <Input type="email" dir="ltr" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="bg-input-background border-border rounded-xl text-left" />
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="space-y-1.5">
                         <Label className="text-right block text-sm">تاريخ الميلاد</Label>
-                        <Input type="date" value={form.birthDate} onChange={(e) => setForm({ ...form, birthDate: e.target.value })} className="bg-input-background border-border rounded-xl" />
+                        <Input type="date" dir="ltr" value={form.birthDate} onChange={(e) => setForm({ ...form, birthDate: e.target.value })} className="bg-input-background border-border rounded-xl" />
                       </div>
                       <div className="space-y-1.5">
                         <Label className="text-right block text-sm">المدينة</Label>

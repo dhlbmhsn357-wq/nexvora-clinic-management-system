@@ -207,16 +207,16 @@ export function ScheduleManagement() {
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1.5">
                 <Label className="text-right block text-sm">بداية العمل</Label>
-                <Input type="time" value={sForm.startTime} onChange={(e) => setSForm({ ...sForm, startTime: e.target.value })} className="bg-input-background border-border rounded-xl" />
+                <Input type="time" dir="ltr" value={sForm.startTime} onChange={(e) => setSForm({ ...sForm, startTime: e.target.value })} className="bg-input-background border-border rounded-xl" />
               </div>
               <div className="space-y-1.5">
                 <Label className="text-right block text-sm">نهاية العمل</Label>
-                <Input type="time" value={sForm.endTime} onChange={(e) => setSForm({ ...sForm, endTime: e.target.value })} className="bg-input-background border-border rounded-xl" />
+                <Input type="time" dir="ltr" value={sForm.endTime} onChange={(e) => setSForm({ ...sForm, endTime: e.target.value })} className="bg-input-background border-border rounded-xl" />
               </div>
             </div>
             <div className="space-y-1.5">
               <Label className="text-right block text-sm">مدة الكشف (دقيقة)</Label>
-              <Input type="number" value={sForm.slotMinutes} onChange={(e) => setSForm({ ...sForm, slotMinutes: Number(e.target.value) })} className="bg-input-background border-border rounded-xl text-right" />
+              <Input type="number" dir="ltr" value={sForm.slotMinutes} onChange={(e) => setSForm({ ...sForm, slotMinutes: Number(e.target.value) })} className="bg-input-background border-border rounded-xl text-right" />
             </div>
           </div>
           <DialogFooter className="gap-2">
@@ -242,7 +242,7 @@ export function ScheduleManagement() {
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1.5">
                 <Label className="text-right block text-sm">التاريخ</Label>
-                <Input type="date" value={eForm.date} onChange={(e) => setEForm({ ...eForm, date: e.target.value })} className="bg-input-background border-border rounded-xl" />
+                <Input type="date" dir="ltr" value={eForm.date} onChange={(e) => setEForm({ ...eForm, date: e.target.value })} className="bg-input-background border-border rounded-xl" />
               </div>
               <div className="space-y-1.5">
                 <Label className="text-right block text-sm">النوع</Label>

@@ -189,6 +189,7 @@ export function ConsultationWorkspace() {
               <CardContent>
                 <Input
                   type="date"
+                  dir="ltr"
                   value={followupDate}
                   onChange={(e) => setFollowupDate(e.target.value)}
                   className="bg-input-background border-border rounded-xl text-right"

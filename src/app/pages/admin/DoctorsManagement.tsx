@@ -93,11 +93,11 @@ export function DoctorsManagement() {
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-1.5">
           <Label className="text-right block text-sm">مدة الكشف (دقيقة)</Label>
-          <Input type="number" value={form.slotDuration} onChange={(e) => setForm({ ...form, slotDuration: Number(e.target.value) })} className="bg-input-background border-border rounded-xl text-right" />
+        <Input type="number" dir="ltr" value={form.slotDuration} onChange={(e) => setForm({ ...form, slotDuration: Number(e.target.value) })} className="bg-input-background border-border rounded-xl text-right" />
         </div>
         <div className="space-y-1.5">
           <Label className="text-right block text-sm">الطاقة اليومية</Label>
-          <Input type="number" value={form.dailyCapacity} onChange={(e) => setForm({ ...form, dailyCapacity: Number(e.target.value) })} className="bg-input-background border-border rounded-xl text-right" />
+        <Input type="number" dir="ltr" value={form.dailyCapacity} onChange={(e) => setForm({ ...form, dailyCapacity: Number(e.target.value) })} className="bg-input-background border-border rounded-xl text-right" />
         </div>
       </div>
     </div>

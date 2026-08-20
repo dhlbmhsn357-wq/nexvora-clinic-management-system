@@ -192,7 +192,7 @@ export function Reports() {
                 <Label htmlFor="endDate" className="text-foreground">تاريخ الانتهاء</Label>
                 <div className="relative">
                   <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground z-10" />
-                  <Input id="endDate" type="date" value={endDate}
+                  <Input id="endDate" type="date" dir="ltr" value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
                     className="pr-10 h-11 bg-input-background border-border rounded-xl" />
                 </div>
@@ -202,7 +202,7 @@ export function Reports() {
                 <Label htmlFor="startDate" className="text-foreground">تاريخ البدء</Label>
                 <div className="relative">
                   <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground z-10" />
-                  <Input id="startDate" type="date" value={startDate}
+                  <Input id="startDate" type="date" dir="ltr" value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
                     className="pr-10 h-11 bg-input-background border-border rounded-xl" />
                 </div>

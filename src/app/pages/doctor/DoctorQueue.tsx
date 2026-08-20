@@ -78,14 +78,11 @@ export function DoctorQueue() {
                 {activePatients.map((p, idx) => {
                   const cfg = statusConfig[p.status];
                   return (
-                    <div key={p.id} className={`flex items-center justify-between px-6 py-4 transition-colors hover:bg-muted/10 ${p.status === "in-consultation" ? "bg-primary/5" : ""}`}>
-                      <div className="flex items-center gap-4">
-                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold">
-                          {idx + 1}
-                        </div>
+                    <div key={p.id} className={`flex flex-wrap items-center justify-between gap-3 px-6 py-4 transition-colors hover:bg-muted/10 ${p.status === "in-consultation" ? "bg-primary/5" : ""}`}>
+                      <div className="flex flex-wrap items-center gap-4">
                         <div className="text-right">
-                          <p className="text-sm font-medium">{p.time}</p>
-                          <p className="text-xs text-muted-foreground">{p.visitType}</p>
+                          <p className="font-semibold text-foreground">{p.name}</p>
+                          <p className="text-xs text-muted-foreground">{p.complaint}</p>
                         </div>
                         {p.waitMinutes != null && (
                           <div className="text-right">
@@ -93,8 +90,11 @@ export function DoctorQueue() {
                           </div>
                         )}
                         <div className="text-right">
-                          <p className="font-semibold text-foreground">{p.name}</p>
-                          <p className="text-xs text-muted-foreground">{p.complaint}</p>
+                          <p className="text-sm font-medium">{p.time}</p>
+                          <p className="text-xs text-muted-foreground">{p.visitType}</p>
+                        </div>
+                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold">
+                          {idx + 1}
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
@@ -148,15 +148,15 @@ export function DoctorQueue() {
                 {donePatients.map((p) => {
                   const cfg = statusConfig[p.status];
                   return (
-                    <div key={p.id} className="flex items-center justify-between px-6 py-3 opacity-60">
-                      <div className="flex items-center gap-4">
-                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center">
-                          <User className="w-4 h-4 text-muted-foreground" />
-                        </div>
-                        <p className="text-sm text-muted-foreground">{p.time}</p>
+                    <div key={p.id} className="flex flex-wrap items-center justify-between gap-3 px-6 py-3 opacity-60">
+                      <div className="flex flex-wrap items-center gap-4">
                         <div className="text-right">
                           <p className="font-medium text-foreground">{p.name}</p>
                           <p className="text-xs text-muted-foreground">{p.complaint}</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{p.time}</p>
+                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center">
+                          <User className="w-4 h-4 text-muted-foreground" />
                         </div>
                       </div>
                       <Badge variant="outline" className={cfg.className}>{cfg.label}</Badge>

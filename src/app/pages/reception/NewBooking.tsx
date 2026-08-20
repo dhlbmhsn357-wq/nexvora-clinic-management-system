@@ -207,7 +207,7 @@ export function NewBooking() {
               <h2 className="text-lg font-bold text-right text-foreground">اختيار الموعد</h2>
               <div className="space-y-2">
                 <Label className="text-right block text-sm">التاريخ</Label>
-                <Input type="date" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} className="bg-input-background border-border rounded-xl" />
+                <Input type="date" dir="ltr" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} className="bg-input-background border-border rounded-xl" />
               </div>
               {selectedDate && selectedDoctor && (
                 <div className="space-y-2">

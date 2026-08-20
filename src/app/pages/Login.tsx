@@ -99,7 +99,7 @@ export function Login() {
                     key={role.value}
                     type="button"
                     onClick={() => setSelectedRole(role.value)}
-                    className={`flex flex-col items-end p-3 rounded-xl border-2 transition-all duration-200 text-right ${
+                    className={`flex flex-col items-start p-3 rounded-xl border-2 transition-all duration-200 text-right ${
                       active
                         ? "border-primary bg-primary/5 shadow-sm"
                         : "border-border hover:border-primary/30 hover:bg-muted/50"
@@ -108,8 +108,8 @@ export function Login() {
                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center mb-1.5 ${active ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
                       <Icon className="w-4 h-4" />
                     </div>
-                    <p className={`text-sm font-semibold ${active ? "text-primary" : "text-foreground"}`}>{role.label}</p>
-                    <p className="text-xs text-muted-foreground leading-tight">{role.description}</p>
+                    <p className={`w-full text-right text-sm font-semibold ${active ? "text-primary" : "text-foreground"}`}>{role.label}</p>
+                    <p className="w-full text-right text-xs text-muted-foreground leading-tight">{role.description}</p>
                   </button>
                 );
               })}
@@ -123,11 +123,11 @@ export function Login() {
                   <Input
                     id="email"
                     type="email"
-                    dir="ltr"
+                    dir="rtl"
                     placeholder="بريدك@مثال.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pr-10 h-12 bg-input-background border-border rounded-xl text-left"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl text-right"
                     required
                   />
                 </div>

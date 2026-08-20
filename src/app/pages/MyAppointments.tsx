@@ -276,33 +276,40 @@ export function MyAppointments() {
                   key={appointment.id}
                   className="p-5 rounded-xl border border-border bg-card hover:shadow-md transition-shadow duration-200"
                 >
-                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                    <div className="flex-1 space-y-3 text-right">
-                      <div className="flex items-center gap-3 flex-wrap justify-end">
+                  <div className="grid grid-cols-1 md:grid-cols-[minmax(12rem,1.4fr)_minmax(9rem,1fr)_minmax(7rem,.8fr)_minmax(10rem,1fr)_minmax(7rem,.8fr)_auto] items-center gap-4 text-sm" dir="rtl">
+                    <div className="min-w-0 text-right">
+                      <div className="flex items-center gap-3 flex-wrap">
                         <h3 className="font-semibold text-foreground text-lg">
                           {appointment.doctor}
                         </h3>
                         {getStatusBadge(appointment.status)}
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-                        <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <User className="w-4 h-4" />
-                          <span>{appointment.specialty}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <span>دور: {appointment.queueNumber}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <Clock className="w-4 h-4" />
-                          <span>{appointment.time}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <Calendar className="w-4 h-4" />
-                          <span>{appointment.date}</span>
-                        </div>
-                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 text-muted-foreground text-right">
+                      <User className="w-4 h-4 flex-shrink-0" />
+                      <span>{appointment.specialty}</span>
+                    </div>
+                    <div className="text-muted-foreground text-right">
+                      <span>دور: {appointment.queueNumber}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground text-right">
+                      <Calendar className="w-4 h-4 flex-shrink-0" />
+                      <span>{appointment.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground text-right">
+                      <Clock className="w-4 h-4 flex-shrink-0" />
+                      <span>{appointment.time}</span>
+                    </div>
+                    <div className="flex items-center gap-2 md:justify-end">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => handleViewDetails(appointment)}
+                        className="rounded-lg border-border hover:bg-muted flex items-center gap-1"
+                      >
+                        التفاصيل
+                        <Eye className="w-4 h-4" />
+                      </Button>
                       {appointment.status !== "completed" && (
                         <Button
                           variant="outline"
@@ -314,15 +321,6 @@ export function MyAppointments() {
                           <X className="w-4 h-4" />
                         </Button>
                       )}
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleViewDetails(appointment)}
-                        className="rounded-lg border-border hover:bg-muted flex items-center gap-1"
-                      >
-                        التفاصيل
-                        <Eye className="w-4 h-4" />
-                      </Button>
                     </div>
                   </div>
                 </div>

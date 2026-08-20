@@ -75,7 +75,7 @@ export function DoctorDashboard() {
       <div className="bg-card border-b border-border shadow-sm sticky top-0 z-10">
         <div className="px-8 py-4 flex items-center justify-between">
           <div className="text-right">
-            <h1 className="text-2xl font-bold text-foreground">يومي اليوم</h1>
+            <h1 className="text-2xl font-bold text-foreground">يومي</h1>
             <p className="text-sm text-muted-foreground">{currentDate}</p>
           </div>
           <Button onClick={() => navigate("/doctor/queue")} variant="outline" className="flex items-center gap-2 rounded-xl">
@@ -92,7 +92,7 @@ export function DoctorDashboard() {
             const Icon = s.icon;
             return (
               <Card key={s.label} className="border-border shadow-sm">
-                <CardContent className="p-5 w-full flex items-center justify-center gap-4">
+                <CardContent className="p-5 w-full flex items-center justify-between gap-4">
                   <div className="text-right">
                     <p className="text-sm text-muted-foreground">{s.label}</p>
                     <p className="text-3xl font-bold text-foreground">{s.value}</p>

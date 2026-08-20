@@ -78,27 +78,27 @@ export function DoctorQueue() {
                 {activePatients.map((p, idx) => {
                   const cfg = statusConfig[p.status];
                   return (
-                    <div key={p.id} className={`flex flex-wrap items-center justify-between gap-3 px-6 py-4 transition-colors hover:bg-muted/10 ${p.status === "in-consultation" ? "bg-primary/5" : ""}`}>
-                      <div className="flex flex-wrap items-center gap-4">
-                        <div className="text-right">
-                          <p className="font-semibold text-foreground">{p.name}</p>
-                          <p className="text-xs text-muted-foreground">{p.complaint}</p>
-                        </div>
-                        {p.waitMinutes != null && (
-                          <div className="text-right">
-                            <p className="text-xs text-amber-600 font-medium">انتظر {p.waitMinutes} د</p>
-                          </div>
-                        )}
-                        <div className="text-right">
-                          <p className="text-sm font-medium">{p.time}</p>
-                          <p className="text-xs text-muted-foreground">{p.visitType}</p>
-                        </div>
-                        <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold">
-                          {idx + 1}
-                        </div>
+                    <div key={p.id} className={`grid grid-cols-1 md:grid-cols-[auto_minmax(12rem,1fr)_auto_auto_auto_auto] items-center gap-4 px-6 py-4 transition-colors hover:bg-muted/10 ${p.status === "in-consultation" ? "bg-primary/5" : ""}`}>
+                      <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold justify-self-start md:justify-self-auto">
+                        {idx + 1}
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="text-right min-w-0">
+                        <p className="font-semibold text-foreground truncate">{p.name}</p>
+                        <p className="text-xs text-muted-foreground truncate">{p.complaint}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-medium whitespace-nowrap">{p.time}</p>
+                        <p className="text-xs text-muted-foreground whitespace-nowrap">{p.visitType}</p>
+                      </div>
+                      <div className="text-right min-w-20">
+                        {p.waitMinutes != null && (
+                          <p className="text-xs text-amber-600 font-medium whitespace-nowrap">انتظر {p.waitMinutes} د</p>
+                        )}
+                      </div>
+                      <div className="flex items-center md:justify-self-end">
                         <Badge variant="outline" className={cfg.className}>{cfg.label}</Badge>
+                      </div>
+                      <div className="flex items-center gap-3 md:justify-self-start">
                         <div className="flex gap-1.5">
                           {p.status === "arrived" && (
                             <Button size="sm" variant="outline" onClick={() => updateStatus(p.id, "waiting")} className="h-7 text-xs rounded-lg">

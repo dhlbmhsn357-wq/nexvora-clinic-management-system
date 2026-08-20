@@ -179,15 +179,16 @@ export function About() {
                       <h3 className="font-bold text-foreground text-xl mb-1">
                         {doctor.name}
                       </h3>
-                      <p className="text-sm text-primary font-medium mb-2">
-                        {doctor.specialty}
+                      <p className="w-full flex items-center gap-2 text-sm text-primary font-medium mb-2 justify-start">
+                        <Stethoscope className="w-4 h-4 flex-shrink-0" />
+                        <span>{doctor.specialty}</span>
                       </p>
                       <div className="space-y-1 mb-3">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground justify-end">
+                        <div className="w-full flex items-center gap-2 text-sm text-muted-foreground justify-start">
                           <Award className="w-4 h-4" />
                           <span>{doctor.experience} خبرة</span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground justify-end">
+                        <div className="w-full flex items-center gap-2 text-sm text-muted-foreground justify-start">
                           <Activity className="w-4 h-4" />
                           <span>{doctor.education}</span>
                         </div>

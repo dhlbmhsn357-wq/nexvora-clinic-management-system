@@ -41,7 +41,7 @@ export function Login() {
         <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
         <div className="relative z-10 flex flex-col justify-center items-end px-16 w-full max-w-xl mx-auto text-right">
-          <div className="flex items-center gap-3 mb-10">
+          <div className="w-full flex items-center justify-start gap-3 mb-10">
             <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
               <Activity className="w-8 h-8 text-primary-foreground" />
             </div>

@@ -279,26 +279,26 @@ export function MyAppointments() {
                   <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                     <div className="flex-1 space-y-3 text-right">
                       <div className="flex items-center gap-3 flex-wrap justify-end">
-                        {getStatusBadge(appointment.status)}
                         <h3 className="font-semibold text-foreground text-lg">
                           {appointment.doctor}
                         </h3>
+                        {getStatusBadge(appointment.status)}
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
+                        <div className="flex items-center gap-2 text-muted-foreground justify-end">
+                          <User className="w-4 h-4" />
+                          <span>{appointment.specialty}</span>
+                        </div>
                         <div className="flex items-center gap-2 text-muted-foreground justify-end">
                           <span>دور: {appointment.queueNumber}</span>
                         </div>
                         <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <span>{appointment.time}</span>
                           <Clock className="w-4 h-4" />
+                          <span>{appointment.time}</span>
                         </div>
                         <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <span>{appointment.date}</span>
                           <Calendar className="w-4 h-4" />
-                        </div>
-                        <div className="flex items-center gap-2 text-muted-foreground justify-end">
-                          <span>{appointment.specialty}</span>
-                          <User className="w-4 h-4" />
+                          <span>{appointment.date}</span>
                         </div>
                       </div>
                     </div>

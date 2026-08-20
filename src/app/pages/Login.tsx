@@ -40,8 +40,8 @@ export function Login() {
         />
         <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
-        <div className="relative z-10 flex flex-col justify-center items-end px-16 w-full text-right">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="relative z-10 flex flex-col justify-center items-end px-16 w-full max-w-xl mx-auto text-right">
+          <div className="flex items-center gap-3 mb-10">
             <div>
               <h1 className="text-3xl font-bold text-foreground">عيادتي</h1>
               <p className="text-muted-foreground">نظام إدارة الرعاية الصحية</p>
@@ -50,15 +50,13 @@ export function Login() {
               <Activity className="w-8 h-8 text-primary-foreground" />
             </div>
           </div>
-          <h2 className="text-3xl font-bold text-foreground mb-6 leading-snug">
-            صحتك
-            <br />
-            أولويتنا
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-5 leading-tight whitespace-nowrap">
+            صحتك أولويتنا
           </h2>
-          <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-lg leading-8">
             منظومة متكاملة لإدارة العيادة — من حجز المريض حتى إنهاء الكشف وتوليد التقارير.
           </p>
-          <div className="mt-12 grid grid-cols-3 gap-8">
+          <div className="mt-10 grid grid-cols-3 gap-10">
             <div className="text-center">
               <p className="text-3xl font-bold text-primary">5000+</p>
               <p className="text-sm text-muted-foreground mt-1">مريض سعيد</p>

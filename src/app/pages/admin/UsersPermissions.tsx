@@ -172,7 +172,7 @@ export function UsersPermissions() {
               <CardContent>
                 <div className="space-y-2">
                   {permissions[selectedRole].map((p) => (
-                    <div key={p} className="flex items-center gap-2 p-2 rounded-lg bg-muted/30 flex-row-reverse">
+                    <div key={p} className="flex items-center gap-2 p-2 rounded-lg bg-muted/30">
                       <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
                       <p className="text-sm text-foreground text-right">{p}</p>
                     </div>

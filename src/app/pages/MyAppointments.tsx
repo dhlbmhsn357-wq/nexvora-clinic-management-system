@@ -163,13 +163,6 @@ export function MyAppointments() {
       <div className="bg-gradient-to-l from-primary/10 via-accent/10 to-secondary/20 border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <Button
-              onClick={() => navigate("/book-appointment")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2"
-            >
-              موعد جديد
-              <Plus className="w-5 h-5" />
-            </Button>
             <div className="text-right">
               <h1 className="text-4xl font-bold text-foreground mb-3">
                 مواعيدي
@@ -178,6 +171,13 @@ export function MyAppointments() {
                 إدارة ومتابعة جميع مواعيدك الطبية
               </p>
             </div>
+            <Button
+              onClick={() => navigate("/book-appointment")}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2"
+            >
+              موعد جديد
+              <Plus className="w-5 h-5" />
+            </Button>
           </div>
         </div>
       </div>
@@ -246,6 +246,15 @@ export function MyAppointments() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col md:flex-row gap-4 mb-6">
+              <div className="flex-1 relative">
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <Input
+                  placeholder="البحث بالطبيب أو التخصص..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pr-10 h-11 bg-input-background border-border rounded-xl text-right"
+                />
+              </div>
               <Select value={filterStatus} onValueChange={setFilterStatus}>
                 <SelectTrigger className="w-full md:w-48 h-11 rounded-xl bg-input-background border-border">
                   <SelectValue placeholder="تصفية حسب الحالة" />
@@ -258,15 +267,6 @@ export function MyAppointments() {
                   <SelectItem value="completed">مكتمل</SelectItem>
                 </SelectContent>
               </Select>
-              <div className="flex-1 relative">
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  placeholder="البحث بالطبيب أو التخصص..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pr-10 h-11 bg-input-background border-border rounded-xl text-right"
-                />
-              </div>
             </div>
 
             {/* Appointments List */}

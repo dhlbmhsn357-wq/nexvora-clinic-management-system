@@ -50,7 +50,7 @@ export function Login() {
               <Activity className="w-8 h-8 text-primary-foreground" />
             </div>
           </div>
-          <h2 className="text-4xl font-bold text-foreground mb-4 leading-tight">
+          <h2 className="text-3xl font-bold text-foreground mb-6 leading-snug">
             صحتك
             <br />
             أولويتنا

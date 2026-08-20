@@ -141,9 +141,6 @@ export function SearchDoctors() {
               <CardContent className="p-5">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Stethoscope className="w-6 h-6 text-primary" />
-                    </div>
                     <div className="text-right">
                       <h3 className="font-bold text-foreground">{d.name}</h3>
                       <p className="text-sm text-muted-foreground">{d.specialty}</p>
@@ -157,6 +154,9 @@ export function SearchDoctors() {
                           <span className="text-sm">{d.rating}</span>
                         </div>
                       </div>
+                    </div>
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Stethoscope className="w-6 h-6 text-primary" />
                     </div>
                   </div>
                   <div className="text-right space-y-2">

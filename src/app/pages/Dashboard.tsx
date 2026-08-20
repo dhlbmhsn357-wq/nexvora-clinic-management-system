@@ -111,6 +111,14 @@ export function Dashboard() {
       <div className="bg-gradient-to-l from-primary/10 via-accent/10 to-secondary/20 border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="text-right">
+              <h1 className="text-4xl font-bold text-foreground mb-3">
+                مرحباً بعودتك، سارة
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl">
+                أدر مواعيدك وتابع زياراتك الصحية وابق على تواصل مع مقدمي الرعاية الصحية في مكان واحد.
+              </p>
+            </div>
             <div className="flex gap-3 flex-wrap">
               <Button
                 onClick={() => navigate("/book-appointment")}
@@ -127,14 +135,6 @@ export function Dashboard() {
                 البحث عن طبيب
               </Button>
             </div>
-            <div className="text-right">
-              <h1 className="text-4xl font-bold text-foreground mb-3">
-                مرحباً بعودتك، سارة
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl">
-                أدر مواعيدك وتابع زياراتك الصحية وابق على تواصل مع مقدمي الرعاية الصحية في مكان واحد.
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -149,14 +149,14 @@ export function Dashboard() {
               className="border-border shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <CardHeader className="flex flex-row items-center justify-between pb-3">
+                <CardTitle className="text-sm font-medium text-muted-foreground text-right">
+                  {stat.title}
+                </CardTitle>
                 <div
                   className={`w-10 h-10 rounded-xl ${stat.bgColor} flex items-center justify-center`}
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
                 </div>
-                <CardTitle className="text-sm font-medium text-muted-foreground text-right">
-                  {stat.title}
-                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-4xl font-bold text-foreground mb-2 text-right">
@@ -175,13 +175,6 @@ export function Dashboard() {
         <Card className="border-border shadow-sm">
           <CardHeader>
             <div className="flex items-center justify-between">
-              <Button
-                variant="outline"
-                onClick={() => navigate("/my-appointments")}
-                className="rounded-lg border-border hover:bg-muted"
-              >
-                عرض الكل
-              </Button>
               <div className="text-right">
                 <CardTitle className="text-2xl font-bold text-foreground">
                   المواعيد الأخيرة
@@ -190,6 +183,13 @@ export function Dashboard() {
                   سجل مواعيدك والزيارات القادمة
                 </p>
               </div>
+              <Button
+                variant="outline"
+                onClick={() => navigate("/my-appointments")}
+                className="rounded-lg border-border hover:bg-muted"
+              >
+                عرض الكل
+              </Button>
             </div>
           </CardHeader>
           <CardContent>

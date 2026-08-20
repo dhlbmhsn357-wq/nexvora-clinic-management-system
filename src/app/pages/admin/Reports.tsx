@@ -154,7 +154,7 @@ export function Reports() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="space-y-2">
+              <div className="space-y-2 order-4">
                 <Label className="text-foreground">تصفية حسب الخدمة</Label>
                 <Select value={filterService} onValueChange={setFilterService}>
                   <SelectTrigger className="h-11 rounded-xl bg-input-background border-border">
@@ -171,7 +171,7 @@ export function Reports() {
                 </Select>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 order-3">
                 <Label className="text-foreground">تصفية حسب الطبيب</Label>
                 <Select value={filterDoctor} onValueChange={setFilterDoctor}>
                   <SelectTrigger className="h-11 rounded-xl bg-input-background border-border">
@@ -188,7 +188,7 @@ export function Reports() {
                 </Select>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 order-2">
                 <Label htmlFor="endDate" className="text-foreground">تاريخ الانتهاء</Label>
                 <div className="relative">
                   <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground z-10" />
@@ -198,7 +198,7 @@ export function Reports() {
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 order-1">
                 <Label htmlFor="startDate" className="text-foreground">تاريخ البدء</Label>
                 <div className="relative">
                   <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground z-10" />

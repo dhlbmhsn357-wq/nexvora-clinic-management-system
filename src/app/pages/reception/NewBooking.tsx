@@ -124,13 +124,13 @@ export function NewBooking() {
                         onClick={() => setSelectedPatient(p)}
                         className={`w-full flex items-center justify-between p-3 rounded-xl border-2 transition-all text-right ${selectedPatient?.id === p.id ? "border-primary bg-primary/5" : "border-border hover:border-primary/30 hover:bg-muted/30"}`}
                       >
-                        <span className="text-xs text-muted-foreground">{p.phone}</span>
                         <div className="flex items-center gap-2">
                           <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                             <User className="w-4 h-4 text-primary" />
                           </div>
                           <p className="font-medium text-foreground">{p.name}</p>
                         </div>
+                        <span className="text-xs text-muted-foreground">{p.phone}</span>
                       </button>
                     ))}
                   </div>
@@ -170,13 +170,13 @@ export function NewBooking() {
                     onClick={() => setSelectedDoctor(d)}
                     className={`w-full flex items-center justify-between p-4 rounded-xl border-2 transition-all text-right ${selectedDoctor?.id === d.id ? "border-primary bg-primary/5" : "border-border hover:border-primary/30 hover:bg-muted/30"}`}
                   >
-                    <Badge variant="outline" className="text-xs">{d.specialty}</Badge>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                         <Stethoscope className="w-5 h-5 text-primary" />
                       </div>
                       <p className="font-semibold text-foreground">{d.name}</p>
                     </div>
+                    <Badge variant="outline" className="text-xs">{d.specialty}</Badge>
                   </button>
                 ))}
               </div>

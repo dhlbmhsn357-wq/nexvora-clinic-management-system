@@ -88,8 +88,8 @@ export function About() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="flex items-center gap-4 mb-6">
             <div className="text-right">
-              <h1 className="text-5xl font-bold text-foreground">عيادتي</h1>
-              <p className="text-xl text-muted-foreground">
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-2">عيادتي</h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 نظام إدارة الرعاية الصحية
               </p>
             </div>
@@ -184,12 +184,12 @@ export function About() {
                       </p>
                       <div className="space-y-1 mb-3">
                         <div className="flex items-center gap-2 text-sm text-muted-foreground justify-end">
-                          <span>{doctor.experience} خبرة</span>
                           <Award className="w-4 h-4" />
+                          <span>{doctor.experience} خبرة</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground justify-end">
-                          <span>{doctor.education}</span>
                           <Activity className="w-4 h-4" />
+                          <span>{doctor.education}</span>
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed">
@@ -225,10 +225,10 @@ export function About() {
                     key={index}
                     className="flex items-center justify-between p-3 rounded-lg bg-muted/30"
                   >
-                    <span className="text-muted-foreground">{schedule.hours}</span>
                     <span className="font-medium text-foreground">
                       {schedule.day}
                     </span>
+                    <span className="text-muted-foreground">{schedule.hours}</span>
                   </div>
                 ))}
               </div>

@@ -140,20 +140,20 @@ export function DoctorsManagement() {
                 </div>
                 <div className="space-y-2 text-right">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{d.branch}</span>
                     <span className="text-muted-foreground">الفرع</span>
+                    <span className="text-muted-foreground">{d.branch}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{d.workDays}</span>
                     <span className="text-muted-foreground">أيام العمل</span>
+                    <span className="text-muted-foreground">{d.workDays}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{d.slotDuration} دقيقة</span>
                     <span className="text-muted-foreground">مدة الكشف</span>
+                    <span className="text-muted-foreground">{d.slotDuration} دقيقة</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">{d.dailyCapacity} مريض</span>
                     <span className="text-muted-foreground">الطاقة اليومية</span>
+                    <span className="text-muted-foreground">{d.dailyCapacity} مريض</span>
                   </div>
                 </div>
                 <div className="flex gap-2 mt-4 pt-4 border-t border-border">

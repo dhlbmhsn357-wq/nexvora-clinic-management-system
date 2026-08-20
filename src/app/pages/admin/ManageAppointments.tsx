@@ -161,6 +161,15 @@ export function ManageAppointments() {
           <CardContent>
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="relative">
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <Input
+                  placeholder="البحث باسم المريض أو الخدمة..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pr-10 h-11 bg-input-background border-border rounded-xl text-right"
+                />
+              </div>
               <Select value={filterStatus} onValueChange={setFilterStatus}>
                 <SelectTrigger className="h-11 rounded-xl bg-input-background border-border">
                   <SelectValue placeholder="تصفية حسب الحالة" />
@@ -187,15 +196,6 @@ export function ManageAppointments() {
                   <SelectItem value="د. جيمس أندرسون">د. جيمس أندرسون</SelectItem>
                 </SelectContent>
               </Select>
-              <div className="relative">
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  placeholder="البحث باسم المريض أو الخدمة..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pr-10 h-11 bg-input-background border-border rounded-xl text-right"
-                />
-              </div>
             </div>
 
             {/* Stats Row */}

@@ -13,7 +13,7 @@ export function DoctorLayout() {
   };
 
   const menuItems = [
-    { path: "/doctor", icon: LayoutDashboard, label: "يومي اليوم" },
+    { path: "/doctor", icon: LayoutDashboard, label: "يومي" },
     { path: "/doctor/queue", icon: Users, label: "قائمة الانتظار" },
     { path: "/doctor/consultations", icon: ClipboardList, label: "الكشوفات" },
   ];

@@ -1,0 +1,123 @@
+/* Shared Arabic/RTL rules. Keep these at the end of the cascade so portals
+   and third-party primitives inherit the same reading direction as the app. */
+:root {
+  direction: rtl;
+  text-align: start;
+}
+
+html,
+body,
+#root {
+  min-width: 0;
+  direction: rtl;
+}
+
+body {
+  overflow-x: hidden;
+  text-align: start;
+}
+
+/* Tailwind's physical text helpers are used throughout the exported bundle.
+   In an Arabic app they should follow the inline writing direction. */
+[dir="rtl"] .text-right,
+[dir="rtl"] .text-left {
+  text-align: start !important;
+}
+
+[dir="rtl"] .text-left {
+  text-align: end !important;
+}
+
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+[dir="rtl"] [role="combobox"],
+[dir="rtl"] [role="listbox"],
+[dir="rtl"] [role="option"],
+[dir="rtl"] [role="menu"],
+[dir="rtl"] [role="menuitem"],
+[dir="rtl"] [role="tab"] {
+  direction: rtl;
+  text-align: start;
+}
+
+/* Preserve the natural reading order of machine-formatted values. */
+[dir="rtl"] input[type="number"],
+[dir="rtl"] input[type="date"],
+[dir="rtl"] input[type="time"],
+[dir="rtl"] input[type="datetime-local"] {
+  direction: ltr;
+  text-align: end;
+  unicode-bidi: plaintext;
+}
+
+[dir="rtl"] table {
+  direction: rtl;
+  text-align: start;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: start;
+  unicode-bidi: plaintext;
+}
+
+/* Most exported buttons put the icon before the label in DOM order. Reversing
+   the flex row makes the Arabic label sit on the right and the icon on the
+   left, while icon-only buttons remain visually unchanged. */
+[dir="rtl"] [data-slot="button"]:not([data-size="icon"]),
+[dir="rtl"] button:not([data-slot]):not([aria-haspopup]) {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] [data-slot="card-header"].flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] [data-slot="card-title"].flex.items-center:not(.justify-between) {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] [data-app-sidebar] a {
+  flex-direction: row-reverse;
+  text-align: start;
+}
+
+[dir="rtl"] nav a.flex.items-center.gap-2,
+[dir="rtl"] nav button[aria-haspopup="menu"] {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] [role="tablist"] {
+  direction: rtl;
+}
+
+[dir="rtl"] [data-slot="dropdown-menu-item"] {
+  flex-direction: row-reverse;
+  text-align: start;
+}
+
+[dir="rtl"] [data-slot="select-trigger"] {
+  text-align: start;
+}
+
+/* Sidebar shells stay usable on narrow screens without changing their desktop
+   placement. They become a normal full-width section instead of overlapping
+   the page content. */
+@media (max-width: 767px) {
+  [data-app-shell] {
+    display: block;
+  }
+
+  [data-app-sidebar] {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    max-height: none;
+  }
+
+  [data-app-content] {
+    margin-inline: 0;
+    width: 100%;
+  }
+}

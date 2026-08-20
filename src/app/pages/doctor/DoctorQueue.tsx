@@ -78,7 +78,7 @@ export function DoctorQueue() {
                 {activePatients.map((p, idx) => {
                   const cfg = statusConfig[p.status];
                   return (
-                    <div key={p.id} className={`grid grid-cols-1 md:grid-cols-[auto_minmax(12rem,1fr)_auto_auto_auto_auto] items-center gap-4 px-6 py-4 transition-colors hover:bg-muted/10 ${p.status === "in-consultation" ? "bg-primary/5" : ""}`}>
+                    <div key={p.id} className={`grid grid-cols-1 md:grid-cols-[auto_minmax(12rem,1.2fr)_minmax(8rem,1fr)_minmax(8rem,1fr)_auto_auto] items-center gap-4 px-6 py-4 transition-colors hover:bg-muted/10 ${p.status === "in-consultation" ? "bg-primary/5" : ""}`}>
                       <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center font-mono text-sm font-bold justify-self-start md:justify-self-auto">
                         {idx + 1}
                       </div>
@@ -86,11 +86,11 @@ export function DoctorQueue() {
                         <p className="font-semibold text-foreground truncate">{p.name}</p>
                         <p className="text-xs text-muted-foreground truncate">{p.complaint}</p>
                       </div>
-                      <div className="text-right">
+                      <div className="text-center justify-self-center">
                         <p className="text-sm font-medium whitespace-nowrap">{p.time}</p>
                         <p className="text-xs text-muted-foreground whitespace-nowrap">{p.visitType}</p>
                       </div>
-                      <div className="text-right min-w-20">
+                      <div className="text-center min-w-20 justify-self-center">
                         {p.waitMinutes != null && (
                           <p className="text-xs text-amber-600 font-medium whitespace-nowrap">انتظر {p.waitMinutes} د</p>
                         )}

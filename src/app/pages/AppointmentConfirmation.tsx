@@ -6,7 +6,7 @@ import {
   Clock,
   User,
   Hash,
-  ArrowRight,
+  ArrowLeft,
   Download,
   Share2,
 } from "lucide-react";
@@ -179,7 +179,7 @@ export function AppointmentConfirmation() {
             onClick={() => navigate("/my-appointments")}
             className="flex-1 h-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 justify-center"
           >
-            <ArrowRight className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5" />
             عرض مواعيدي
           </Button>
           <Button

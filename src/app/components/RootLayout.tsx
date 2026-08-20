@@ -32,7 +32,7 @@ export function RootLayout() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Brand */}
-            <Link to="/" className="flex flex-row-reverse items-center gap-2 group">
+            <Link to="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-md transition-transform group-hover:scale-105">
                 <Activity className="w-6 h-6 text-primary-foreground" />
               </div>
@@ -102,7 +102,7 @@ export function RootLayout() {
 
             {/* User Menu */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex flex-row-reverse items-center gap-3 px-3 py-2 rounded-xl hover:bg-muted transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring">
+              <DropdownMenuTrigger className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-muted transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring">
                 <ChevronDown className="w-4 h-4 text-muted-foreground" />
                 <div className="hidden md:block text-right">
                   <p className="text-sm font-medium text-foreground">

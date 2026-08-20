@@ -25,8 +25,8 @@ export function Register() {
     <div className="min-h-screen flex" dir="rtl">
       {/* Right Side - Branding */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-bl from-accent/30 via-primary/20 to-secondary/40 relative overflow-hidden">
-        <div className="absolute top-32 start-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 end-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-32 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 flex flex-col justify-center items-end px-16 w-full text-right">
           <div className="flex items-center gap-3 mb-8">
@@ -113,7 +113,7 @@ export function Register() {
                   الاسم الكامل
                 </Label>
                 <div className="relative">
-                  <User className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <User className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     id="fullName"
                     type="text"
@@ -122,7 +122,7 @@ export function Register() {
                     onChange={(e) =>
                       setFormData({ ...formData, fullName: e.target.value })
                     }
-                    className="pe-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-start"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-right"
                     required
                   />
                 </div>
@@ -133,7 +133,7 @@ export function Register() {
                   البريد الإلكتروني
                 </Label>
                 <div className="relative">
-                  <Mail className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Mail className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     id="email"
                     type="email"
@@ -142,7 +142,7 @@ export function Register() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="pe-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-start"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-right"
                     required
                   />
                 </div>
@@ -153,7 +153,7 @@ export function Register() {
                   رقم الهاتف
                 </Label>
                 <div className="relative">
-                  <Phone className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Phone className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     id="phone"
                     type="tel"
@@ -162,7 +162,7 @@ export function Register() {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="pe-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-start"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-right"
                     required
                   />
                 </div>
@@ -173,7 +173,7 @@ export function Register() {
                   كلمة المرور
                 </Label>
                 <div className="relative">
-                  <Lock className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Lock className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     id="password"
                     type={showPassword ? "text" : "password"}
@@ -182,13 +182,13 @@ export function Register() {
                     onChange={(e) =>
                       setFormData({ ...formData, password: e.target.value })
                     }
-                    className="pe-10 ps-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-start"
+                    className="pr-10 pl-10 h-12 bg-input-background border-border rounded-xl focus:ring-2 focus:ring-primary/20 transition-all text-right"
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute start-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {showPassword ? (
                       <EyeOff className="w-5 h-5" />

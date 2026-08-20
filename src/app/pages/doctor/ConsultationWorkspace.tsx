@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import {
-  ArrowLeft, User, AlertTriangle, Pill, FlaskConical, Scan, CalendarPlus,
+  ArrowRight, User, AlertTriangle, Pill, FlaskConical, Scan, CalendarPlus,
   Plus, Trash2, CheckCircle2, ChevronDown, ChevronUp
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
@@ -99,7 +99,7 @@ export function ConsultationWorkspace() {
               onClick={() => navigate("/doctor")}
               className="rounded-xl gap-2"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" />
               العودة
             </Button>
             <Button

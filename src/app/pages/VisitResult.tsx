@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import {
-  ArrowLeft, CheckCircle2, Pill, FlaskConical, Scan, CalendarCheck, FileText, Stethoscope
+  ArrowRight, CheckCircle2, Pill, FlaskConical, Scan, CalendarCheck, FileText, Stethoscope
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -30,7 +30,7 @@ export function VisitResult() {
     <div className="min-h-screen bg-background" dir="rtl">
       <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
         <button onClick={() => navigate("/my-appointments")} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4" />
           العودة لمواعيدي
         </button>
 

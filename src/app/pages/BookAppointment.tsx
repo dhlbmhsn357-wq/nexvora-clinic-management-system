@@ -256,7 +256,7 @@ export function BookAppointment() {
                 disabled={!canContinue()}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
-                <ArrowRight className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4" />
                 {step === 3 ? "تأكيد الموعد" : "التالي"}
               </Button>
               <Button
@@ -265,7 +265,7 @@ export function BookAppointment() {
                 className="rounded-lg border-border hover:bg-muted flex items-center gap-2"
               >
                 {step > 1 ? "السابق" : "إلغاء"}
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
           </CardContent>

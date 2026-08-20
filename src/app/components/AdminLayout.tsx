@@ -50,9 +50,9 @@ export function AdminLayout() {
   ];
 
   return (
-    <div className="min-h-screen flex bg-background" dir="rtl" data-app-shell>
+    <div className="min-h-screen flex bg-background" dir="rtl">
       {/* Fixed Sidebar - Right Side for RTL */}
-      <aside className="w-64 bg-[#2C2C2C] text-white flex flex-col fixed right-0 left-auto top-0 h-screen shadow-xl z-40 overflow-y-auto" data-app-sidebar>
+      <aside className="w-64 bg-[#2C2C2C] text-white flex flex-col fixed right-0 h-screen shadow-xl z-40 overflow-y-auto">
         {/* Logo Section */}
         <div className="p-6 border-b border-white/10 flex-shrink-0">
           <div className="flex items-center gap-3 mb-2">
@@ -61,7 +61,7 @@ export function AdminLayout() {
             </div>
             <h1 className="text-xl font-bold">ميديكير</h1>
           </div>
-          <p className="text-xs text-white/60 ms-[52px]">لوحة الإدارة</p>
+          <p className="text-xs text-white/60 mr-[52px]">لوحة الإدارة</p>
         </div>
 
         {/* Navigation Menu */}
@@ -122,7 +122,7 @@ export function AdminLayout() {
       </aside>
 
       {/* Main Content Area - margin-right for RTL sidebar */}
-      <div className="flex-1 me-64" data-app-content>
+      <div className="flex-1 mr-64">
         <Outlet />
       </div>
     </div>

@@ -166,12 +166,12 @@ export function ManagePatients() {
           <CardContent>
             <div className="mb-6">
               <div className="relative">
-                <Search className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   placeholder="البحث بالاسم أو البريد الإلكتروني أو الهاتف..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pe-10 h-11 bg-input-background border-border rounded-xl text-start"
+                  className="pr-10 h-11 bg-input-background border-border rounded-xl text-right"
                 />
               </div>
             </div>

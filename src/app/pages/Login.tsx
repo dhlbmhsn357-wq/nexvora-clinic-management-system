@@ -38,8 +38,8 @@ export function Login() {
               "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M36 18c3.314 0 6 2.686 6 6s-2.686 6-6 6-6-2.686-6-6 2.686-6 6-6z' stroke='%237FA08C' stroke-width='.5' opacity='.1'/%3E%3C/g%3E%3C/svg%3E\")",
           }}
         />
-        <div className="absolute top-20 end-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 start-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
         <div className="relative z-10 flex flex-col justify-center items-end px-16 w-full text-right">
           <div className="flex items-center gap-3 mb-8">
             <div>
@@ -121,14 +121,14 @@ export function Login() {
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-foreground">البريد الإلكتروني</Label>
                 <div className="relative">
-                  <Mail className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Mail className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     id="email"
                     type="email"
                     placeholder="بريدك@مثال.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pe-10 h-12 bg-input-background border-border rounded-xl text-start"
+                    className="pr-10 h-12 bg-input-background border-border rounded-xl text-right"
                     required
                   />
                 </div>
@@ -137,20 +137,20 @@ export function Login() {
               <div className="space-y-2">
                 <Label htmlFor="password" className="text-foreground">كلمة المرور</Label>
                 <div className="relative">
-                  <Lock className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Lock className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="أدخل كلمة المرور"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pe-10 ps-10 h-12 bg-input-background border-border rounded-xl text-start"
+                    className="pr-10 pl-10 h-12 bg-input-background border-border rounded-xl text-right"
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute start-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>

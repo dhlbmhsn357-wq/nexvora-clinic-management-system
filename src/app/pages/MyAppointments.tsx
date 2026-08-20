@@ -249,7 +249,7 @@ export function MyAppointments() {
               <Select value={filterStatus} onValueChange={setFilterStatus}>
                 <SelectTrigger className="w-full md:w-48 h-11 rounded-xl bg-input-background border-border">
                   <SelectValue placeholder="تصفية حسب الحالة" />
-                  <Filter className="w-4 h-4 me-2" />
+                  <Filter className="w-4 h-4 ml-2" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">جميع الحالات</SelectItem>
@@ -259,12 +259,12 @@ export function MyAppointments() {
                 </SelectContent>
               </Select>
               <div className="flex-1 relative">
-                <Search className="absolute end-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   placeholder="البحث بالطبيب أو التخصص..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pe-10 h-11 bg-input-background border-border rounded-xl text-start"
+                  className="pr-10 h-11 bg-input-background border-border rounded-xl text-right"
                 />
               </div>
             </div>

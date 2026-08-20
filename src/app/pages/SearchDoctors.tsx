@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Search, Stethoscope, Clock, MapPin, Star, Calendar, ChevronLeft } from "lucide-react";
+import { Search, Stethoscope, Clock, MapPin, Star, Calendar, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
@@ -33,7 +33,7 @@ export function SearchDoctors() {
       <div className="min-h-screen bg-background" dir="rtl">
         <div className="max-w-3xl mx-auto px-6 py-8 space-y-6">
           <button onClick={() => setSelectedDoctor(null)} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronRight className="w-4 h-4" />
             العودة للبحث
           </button>
 
@@ -111,12 +111,12 @@ export function SearchDoctors() {
 
         {/* Search bar */}
         <div className="relative">
-              <Search className="absolute end-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+          <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="ابحث عن طبيب أو تخصص..."
-            className="pe-12 h-14 text-lg bg-card border-border rounded-2xl shadow-sm text-start"
+            className="pr-12 h-14 text-lg bg-card border-border rounded-2xl shadow-sm text-right"
           />
         </div>
 

@@ -92,7 +92,7 @@ export function DoctorDashboard() {
             const Icon = s.icon;
             return (
               <Card key={s.label} className="border-border shadow-sm">
-                <CardContent className="p-5 flex items-center gap-4">
+                <CardContent className="p-5 w-full flex items-center justify-center gap-4">
                   <div className="text-right">
                     <p className="text-sm text-muted-foreground">{s.label}</p>
                     <p className="text-3xl font-bold text-foreground">{s.value}</p>
